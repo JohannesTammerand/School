@@ -1,0 +1,2 @@
+package K7
+depends = contrib
