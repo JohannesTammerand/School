@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -40,26 +41,36 @@ string hinnang(double kehamassiindeks){
 }
 
 void andmed_failist(string failinimi){
-    fstream sisend(failinimi);
-    fstream valjund("tulemused.txt");
+    ifstream sisend(failinimi);
+    ofstream valjund("tulemused.txt");
 
     string rida;
 
     int kogus;
     double keskmine;
-    double summa;
+    double summa = 0;
     while(getline(sisend, rida)) {
-        kogus = 0;
-        keskmine = 0;
+        vector<string> tulemus;
+        istringstream ss(rida);
+        string t;
 
-        while(rida.find(";;") != string::npos){
-            int index = rida.find(";;");
-
-            rida.replace(index, 2, ' ');
+        while(getline(ss, t, ';')){
+            if (!t.empty()) {
+                tulemus.push_back(t);
+            }
+            ss.get();
         }
 
+        keskmine = 0;
+        kogus = 0;
+        for (string arv : tulemus){
+            keskmine += stod(arv);
+            summa += stod(arv);
+            kogus++;
+        }
         keskmine /= kogus;
-        valjund << keskmine << "\n";
+
+        valjund << keskmine << endl;
     }
     valjund << summa;
 
