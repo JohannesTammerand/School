@@ -6,7 +6,7 @@ using namespace std;
 
 template <typename T, typename U>
 T liida(T t, U u){
-    return t + u;
+    cout << t + u << endl;
 }
 
 template <typename T>
@@ -15,7 +15,7 @@ bool onVahemikus(T t, int i1, int i2){
 }
 
 template <typename T>
-//requires integral<T> || floating_point<T>
+requires integral<T> || floating_point<T>
 class Massiiv{
 public:
     Massiiv();
