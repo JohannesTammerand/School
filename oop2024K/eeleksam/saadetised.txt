@@ -1,0 +1,7 @@
+kiri;2;1234
+pakk;3.5
+pakk;4.2;3453
+kiri;1
+kiri;3;9876
+pakk;2
+pakk;0.8
