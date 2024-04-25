@@ -1,4 +1,3 @@
-#include "point2.cpp"
 #include "line2.cpp"
 
 class Circle2{

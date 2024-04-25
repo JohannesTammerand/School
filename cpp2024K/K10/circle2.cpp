@@ -36,6 +36,7 @@ void Circle2::scale(float factor){
 
 ostream& operator<<(ostream& os, Circle2& c){
     os << "(" << c.p1 << ", " << c.r << ")";
+    return os;
 }
 
 shared_ptr<Point2> Circle2::getNp1(){

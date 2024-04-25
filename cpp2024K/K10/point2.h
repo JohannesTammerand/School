@@ -9,7 +9,7 @@ public:
 
     float distanceFrom(shared_ptr<Point2>);
     friend ostream& operator<<(ostream& os, const Point2& p);
-    
+
     float getNx();
     void setNx(float x);
     float getNy();

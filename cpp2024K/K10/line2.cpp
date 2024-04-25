@@ -1,5 +1,4 @@
 #include "line2.h"
-#include "point2.cpp"
 #include <iostream>
 
 using namespace std;

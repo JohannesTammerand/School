@@ -1,4 +1,4 @@
-#include "point2.h"
+#include "point2.cpp"
 #include <iostream>
 using namespace std;
 
@@ -14,7 +14,7 @@ public:
 
     float length();
     friend ostream& operator<<(ostream& os, const Line2& l);
-    
+
     shared_ptr<Point2> getNp1();
     shared_ptr<Point2> getNp2();
     void setNp1(shared_ptr<Point2> p);
