@@ -1,3 +1,6 @@
+#ifndef CIRCLE2_H
+#define CIRCLE2_H
+
 #include "line2.cpp"
 
 class Circle2{
@@ -25,3 +28,5 @@ private:
     shared_ptr<Point2> p1{};
     float r{};
 };
+
+#endif

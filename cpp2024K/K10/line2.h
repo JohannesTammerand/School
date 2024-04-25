@@ -1,3 +1,6 @@
+#ifndef LINE2_H
+#define LINE2_H
+
 #include "point2.cpp"
 #include <iostream>
 using namespace std;
@@ -23,3 +26,5 @@ private:
     shared_ptr<Point2> p1{};
     shared_ptr<Point2> p2{};
 };
+
+#endif

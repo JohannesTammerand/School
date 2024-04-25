@@ -1,3 +1,6 @@
+#ifndef POINT2_H
+#define POINT2_H
+
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -18,3 +21,5 @@ private:
     float x{};
     float y{};
 };
+
+#endif
