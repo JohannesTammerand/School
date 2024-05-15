@@ -1,0 +1,5 @@
+Signalis saab seada sõnumid nii, et need hävinevad teatud aja pärast
+
+Signal on vabavaraine, mis tähendab, et kasutajad saavad uurida, mida selle kood tegelikult teeb
+
+Signal saab peita sõnumite metadata-t

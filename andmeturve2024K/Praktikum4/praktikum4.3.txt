@@ -1,0 +1,6 @@
+X-Mailer: telnet
+	See näitab, et e-mail saadeti käsurealt
+
+ARC-Seal: i=1; a=rsa-sha256; t=1711017366; cv=none;
+	cv=none näitab, et sõnum ei kasutanud ARC valideerimist
+

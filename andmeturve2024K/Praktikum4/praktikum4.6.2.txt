@@ -1,0 +1,2 @@
+Tor-i kasutamine aitab peita sind idntifitseerivat infot igasuguste võimalike jälgijate eest.
+Tori-i üks põhimõtetest on, et iga kasutaja oleks teineteisest nii eristamatu kui võimalik
