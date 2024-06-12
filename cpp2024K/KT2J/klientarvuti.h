@@ -1,7 +1,7 @@
 #ifndef KLIENTARVUTI_H
 #define KLIENTARVUTI_H
 
-#include "kasutaja.cpp"
+#include "kasutaja.h"
 #include <string>
 #include <vector>
 #include <memory>

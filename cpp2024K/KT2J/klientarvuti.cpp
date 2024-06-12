@@ -1,7 +1,7 @@
 #include "klientarvuti.h"
 #include <iostream>
 
-//using namespace std;
+using namespace std;
 
 void Klientarvuti::lisaKasutaja(shared_ptr<Kasutaja> k){
     for (shared_ptr<Kasutaja> k1 : kasutajad){

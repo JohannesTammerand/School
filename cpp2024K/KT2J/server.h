@@ -1,7 +1,7 @@
 #ifndef SERVER_H
 #define SERVER_H
 
-#include "klientarvuti.cpp"
+#include "klientarvuti.h"
 #include <map>
 
 class Server{
