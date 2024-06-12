@@ -1,7 +1,7 @@
 #ifndef CIRCLE2_H
 #define CIRCLE2_H
 
-#include "line2.cpp"
+#include "line2.h"
 
 class Circle2{
 public:

@@ -1,7 +1,7 @@
 #ifndef LINE2_H
 #define LINE2_H
 
-#include "point2.cpp"
+#include "point2.h"
 #include <iostream>
 using namespace std;
 

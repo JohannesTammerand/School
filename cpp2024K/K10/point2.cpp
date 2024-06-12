@@ -6,7 +6,7 @@ using namespace std;
 
 float Point2::distanceFrom(shared_ptr<Point2> p){
     Point2 punkt = *p;
-    return sqrt(pow(punkt.x - x, 2) + pow(punkt.y - y, 2));
+    return sqrt(powf(punkt.x - x, 2) + powf(punkt.y - y, 2));
 }
 
 ostream& operator<<(ostream& os, const Point2& p){

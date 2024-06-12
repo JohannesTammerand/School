@@ -1,12 +1,13 @@
 #include "circle2.h"
 #include <cmath>
+#include <numbers>
 
 float Circle2::circumference(){
-    return 2*r*M_PI;
+    return 2*r*std::numbers::pi_v<float>;
 }
 
 float Circle2::area(){
-    return r*r*M_PI;
+    return r*r*std::numbers::pi_v<float>;
 }
 
 bool Circle2::contains(shared_ptr<Point2> p){
