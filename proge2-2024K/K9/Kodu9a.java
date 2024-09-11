@@ -43,7 +43,7 @@ class Kodu9a {
     }
 
     public static int[] pikiTee5Rek(int[][] a, int[] b){
-
+        throw new UnsupportedOperationException();
     }
 
     public static void main(String[] args) {

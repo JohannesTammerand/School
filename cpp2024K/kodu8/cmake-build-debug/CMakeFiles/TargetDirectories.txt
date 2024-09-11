@@ -1,0 +1,3 @@
+C:/Users/johan/school/cpp2024K/kodu8/cmake-build-debug/CMakeFiles/kodu8.dir
+C:/Users/johan/school/cpp2024K/kodu8/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/johan/school/cpp2024K/kodu8/cmake-build-debug/CMakeFiles/rebuild_cache.dir

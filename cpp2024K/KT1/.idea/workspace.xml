@@ -6,7 +6,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f53ebdc-4ea7-40c1-a532-27634369fe77" name="Changes" comment="" />
+    <list default="true" id="6f53ebdc-4ea7-40c1-a532-27634369fe77" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../kodu8/.idea/kodu8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../kodu8/.idea/kodu8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kodu8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../kodu8/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/K9/Kodu9a.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/K9/Kodu9a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/KT2/Kt2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/KT2/Kt2E.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/Kodu9a.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/Kodu9a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/Kt2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../proge2-2024K/out/production/proge2-2024K/Kt2.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,14 +24,17 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2023" />
     <option name="minorVersion" value="3.3" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2eJPPu7cFemNAJPeaJHO7y9jSkm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +48,9 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "nodejs_package_manager_path": "npm"
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -48,7 +62,11 @@
       <option name="presentableId" value="Default" />
       <updated>1711619689894</updated>
       <workItem from="1711619739997" duration="5000" />
+      <workItem from="1716453159740" duration="174000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
