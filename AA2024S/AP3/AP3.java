@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class AP3 {
     public static void main(String[] args) {
-        System.out.println(yl2b(6));
+        yl3(4);
     }
 
     public static boolean yl1(String s){
@@ -48,14 +48,31 @@ public class AP3 {
     }
 
     public static void yl3(int n){
-        Deque<Character> bitid = new ArrayDeque<>();
+        Deque<Integer> bitid = new ArrayDeque<>();
         for (int i = 0; i < n; i++) {
-            bitid.add('0');
+            bitid.add(0);
         }
         System.out.println(bitid.toString());
-        for (int oiged = 0; oiged < n; oiged++) {
+        for (int oiged = 1; oiged <= n; oiged++) {
             for (int i = 0; i < oiged; i++) {
-
+                bitid.removeLast();
+            }
+            bitid.add(1);
+            for (int i = 1; i < oiged; i++) {
+                bitid.add(0);
+            }
+            //System.out.println(bitid.toString());
+            for (int i = 0; i <= oiged; i++) {
+                for (int j = 0; j < i; j++) {
+                    for (int k = 0; k < j; k++) {
+                        bitid.removeLast();
+                    }
+                    bitid.add(1);
+                    for (int k = 1; k < j; k++) {
+                        bitid.add(0);
+                    }
+                    System.out.println(bitid.toString());
+                }
             }
         }
     }
