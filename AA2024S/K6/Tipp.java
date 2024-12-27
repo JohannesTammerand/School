@@ -1,3 +1,5 @@
+package K6;
+
 public class Tipp {
     String info;
     Tipp v;
