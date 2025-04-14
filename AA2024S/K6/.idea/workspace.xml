@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06d8585b-681d-4b30-89cc-cf75d4b7a43a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../K8/Kodu8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/AA2024S/K6/Kodu6a.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/AA2024S/K6/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/AA2024S/K8/Kodu8$Tipp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../out/production/AA2024S/K8/Kodu8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/AP3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/AP3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AP3/out/production/AP3/AP3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/K2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/K2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K2/out/production/K2/Kodu2a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/.idea/K3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/.idea/K3.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/Kodu3a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/Kodutöö/Salajane/miksSaSiin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/Kodutöö/asi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/Kodutöö/vaiksem.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K3/out/production/K3/Kodutöö/vormistamine.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/K4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/.idea/K4.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/Kodu4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K4/out/production/K4/Kodu4a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/.idea/K5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/.idea/K5.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/KOTipp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../K5/out/production/K5/Kodu5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/K6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kodu6a.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kodu6a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kõrboja_peremees.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Korboja_peremees.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/.idea/K6.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/FailiSisu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/Kodu6a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/Kõrboja_peremees.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/AA2024S/K6/Korboja_peremees.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/K6/Tipp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AKT" beforeDir="false" afterPath="$PROJECT_DIR$/../../AKT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AKT/src/main/java/week3/FiniteAutomaton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AKT/src/main/java/week3/FiniteAutomaton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AKT/src/main/java/week5/AktkHandwrittenLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../AKT/src/main/java/week5/AktkHandwrittenLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../test.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2plVTNXr9YbVn6YOsedRKF0Or9Y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Kodu6a.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-corretto-21.0.2-4caba194b151-51586f01" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06d8585b-681d-4b30-89cc-cf75d4b7a43a" name="Changes" comment="" />
+      <created>1733340658812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733340658812</updated>
+      <workItem from="1733340662854" duration="5499000" />
+      <workItem from="1739466296207" duration="599000" />
+      <workItem from="1744624770180" duration="74000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
