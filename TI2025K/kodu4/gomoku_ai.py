@@ -12,6 +12,7 @@
 
 import gomoku_baas as gb
 import gomoku as gm
+from copy import deepcopy
 
 
 def getTurn(board, player):
@@ -22,7 +23,7 @@ def getTurn(board, player):
     bestRate = 0
     for move in moves:
         rating = rateMove(move, player)
-        if rating == -1:
+        if rating == 100:
             return move
 
         if (rating > bestRate):
@@ -73,10 +74,35 @@ def rateMove(move, player):
 
         score += ownCount
         if enemyCount >= 3:
-            return -1
+            return 100
 
         if ownCount == 5:
-            return -1
+            return 100
         
 
     return score
+
+
+def minimax(board, depth, move, player):
+    bestTurn = (-1, -1)
+    bestRate = 0
+    moves = gm.getPossMoves(board)
+    depth -= 1
+    if depth >= 0 and len(moves) > depth:
+        if player == move:
+            pass
+
+def maximizer(board, moves, move):
+    bestTurn = (-1, -1)
+    bestRate = 0
+    bestTurns = []
+    for turn in moves:
+        b = deepcopy(board)
+        b[turn[0]][turn[1]] = move
+        rate = rateMove(move, b)
+        if rate > bestRate:
+            bestTurns = [turn]
+            bestRate = rate
+        elif rate == bestRate:
+            bestTurns.append(turn)
+    return bestTurn, bestRate
