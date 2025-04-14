@@ -1,3 +1,5 @@
+package K6;
+
 import java.io.*;
 import java.util.BitSet;
 
