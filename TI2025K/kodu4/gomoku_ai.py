@@ -14,54 +14,48 @@ import random
 import gomoku_baas as gb
 import gomoku as gm
 from copy import deepcopy
+import numpy as np
 
 
-player = 1
+lastOppMove = (0, 0)
+lastMove = (0, 0)
+lastRate = 0
+lastBoardState = [[0]*15 for i in range(15)]
 
 def getTurn(board, move, depth=2):
-    print("getTurn")
-    global player
-    player = move
+    global lastRate, lastBoardState, lastOppMove
 
-    moves = gm.getPossMoves(board)
-    bestTurns = random.choice(moves)
+    for row in board:
+        for column in row:
+            if column == move and lastBoardState[row][column] != move:
+                lastMove = (row, column)
+            if column == 3 - move and lastBoardState[row][column] != 3 - move:
+                lastOppMove = (row, column)
+
+    moves = getFilteredMoves(board)
+    #bestTurns = [random.choice(moves)]
+    bestTurns = [moves[0]]
     bestRate = 0
+    startRate = rateBoard(board, move)
     for turn in moves:
         b = deepcopy(board)
-        b[turn[0]][turn[1]] = player
-        _turn, rate = minimax(b, depth, move, float('-inf'), float('inf'))
+        b[turn[0]][turn[1]] = move
+        _turn, rate = minimax(b, startRate, lastMove, depth, move, move, float('-inf'), float('inf'))
+        print(turn, rate)
+        if rate > 1000000:
+                print("Made move", turn, "score:", rate)
+                return turn
         if rate > bestRate:
             bestTurns = [turn]
             bestRate = rate
         elif rate == bestRate:
             bestTurns.append(turn)
 
-    return random.choice(bestTurns)
+    madeTurn = random.choice(bestTurns)
+    print("Made move", madeTurn, "score:", bestRate)
 
-
-    # moves = gm.getPossMoves(gm.board)
-
-
-    # bestMove = None
-    # bestRate = 0
-    # for move in moves:
-    #     rating = rateMove(move, player)
-    #     if rating == 100:
-    #         return move
-
-    #     if (rating > bestRate):
-    #         bestMove = move
-    #         bestRate = rating
-    #         #print(bestMove, bestRate)
-
-    # return bestMove
-
-
-    # # Üks võimalikest käikudest
-    # move = (7, 7)
-    # # move = [7,7] #sobib ka, kusagil otseselt tuple'iks olekut ei kontrollita
-    # # Siia tuleb järgmise käigu genereerimise loogika, kasutada võib ka siia faili loodud funktsioone
-    # return move
+    lastBoardState = board
+    return madeTurn
 
 
 def rateMove(turn, move):
@@ -106,16 +100,12 @@ def rateMove(turn, move):
 
     return score
 
-def rateBoard(board, move):
-    total = 0
-    for i in range(15):
-        for j in range(15):
-            if board[i][j] == move:
-                total += rateStone((i, j), move, board)
-            elif board[i][j] == 3 - player:
-                total -= rateStone((i, j), 3 - move, board)
-    return total
+def rateBoard(board, move, lastMove, lastRate):
 
+    total += rateStone(lastMove, move, board)
+    total -= rateStone(lastOppMove, move, board)
+
+    return total + lastRate
 
 def rateStone(pos, move, board):
     directions = [(-1, 0), (0, -1), (-1, 1), (1, 1)]
@@ -142,15 +132,18 @@ def getLineFromBoard(pos, dx, dy, board, move):
                 line += 'O'
         else:
             line += 'O'
+
+    if line.count('_XX_') > 0:
+        print(pos)
     return line
 
 def scorePattern(line):
     patterns = {
-        'XXXXX': 100000,
+        'XXXXX': 1000000,
         '_XXXX_': 10000,
         'XXXX_': 5000, '_XXXX': 5000,
         '_XXX_': 1000, 'XXX__': 500, '__XXX': 500,
-        '_XX_': 200, 'XX__': 100, '__XX': 100
+        '_XX_': 200, 'XX__': 100, '__XX': 100,
     }
 
     total = 0
@@ -158,70 +151,80 @@ def scorePattern(line):
         total += line.count(pattern) * score
     return total
 
+def getFilteredMoves(board, radius=1):
+    moves = set()
+    for i in range(15):
+        for j in range(15):
+            if board[i][j] != 0:
+                for dx in range(-radius, radius + 1):
+                    for dy in range(-radius, radius + 1):
+                        ni, nj = i + dx, j + dy
+                        if 0 <= ni < 15 and 0 <= nj < 15 and board[ni][nj] == 0:
+                            moves.add((ni, nj))
+    return list(moves)
 
 
-def minimax(board, depth, move, alpha, beta):
-    print("minimax")
-    moves = gm.getPossMoves(board)
-    bestTurn = moves[0]
-    bestRate = 0
-    
-    depth -= 1
-    if depth >= 0 and len(moves) > depth:
-        if player == move:
-            bestTurn, bestRate = maximizer(board, moves, depth, move, alpha, beta)
-        else:
-            bestTurn, bestRate = minimizer(board, moves, depth, move, alpha, beta)
-    return bestTurn, bestRate
-    
 
-def maximizer(board, allturns, depth, move, alpha, beta):
-    print("maximizer")
-    bestturn = (-1, -1)
-    bestturns = allturns
-    bestrate = 100
-    for turn in allturns:
+def minimax(board, currentRate, depth, current_player, maximizing_player, alpha, beta):
+    #print("minimax", depth)
+
+    moves = getFilteredMoves(board, radius=2)
+    if depth < 0 or not moves:
+        return None, rateBoard(board, maximizing_player, lastMove, currentRate)
+
+    if current_player == maximizing_player:
+        return maximizer(board, currentRate, depth, current_player, maximizing_player, alpha, beta)
+    else:
+        return minimizer(board, currentRate, depth, current_player, maximizing_player, alpha, beta)
+
+def maximizer(board, currentRate, depth, current_player, maximizing_player, alpha, beta):
+    #print("maximizer", depth)
+
+    global lastMove
+
+    bestRate = float('-inf')
+    bestMoves = []
+    moves = getFilteredMoves(board)
+
+    for move in moves:
         b = deepcopy(board)
-        b[turn[0]][turn[1]] = move
-        rate = rateBoard(b, move)
-        if rate==100 and bestrate<100:
-            bestturns = [turn]
-            bestrate = rate
-        if depth > 0 and bestrate<100:
-            _turn, rate = minimax(b, depth, 3 - move, alpha, beta)
-        if rate > bestrate:
-            bestrate = rate
-            bestturns = [turn]
-        elif rate == bestrate:
-            bestturns.append(turn)
+        b[move[0]][move[1]] = current_player
+        lastMove = move
+        _, rate = minimax(b, currentRate, depth - 1, 3 - current_player, maximizing_player, alpha, beta)
+        if rate > bestRate:
+            bestRate = rate
+            bestMoves = [move]
+        elif rate == bestRate:
+            bestMoves.append(move)
 
         alpha = max(alpha, rate)
         if beta <= alpha:
             break
 
-    bestturn = random.choice(bestturns)
-    return bestturn, bestrate
+    return random.choice(bestMoves), bestRate
 
-def minimizer(board, allturns, depth, move, alpha, beta):
-    print("minimizer")
-    bestRate = 100
-    bestTurns = allturns
+def minimizer(board, currentRate, depth, current_player, maximizing_player, alpha, beta):
+    #print("minimizer", depth)
 
-    for turn in allturns:
+    global lastOppMove
+
+    bestRate = float('inf')
+    bestMoves = []
+    moves = getFilteredMoves(board)
+
+    for move in moves:
         b = deepcopy(board)
-        b[turn[0]][turn[1]] = move
-        if depth > 0:
-            _turn, rate = minimax(b, depth, 3 - move, alpha, beta)
-        else:
-            rate = 60 - rateBoard(b, move)
+        b[move[0]][move[1]] = current_player
+        lastOppMove = move
+        _, rate = minimax(b, currentRate, depth - 1, 3 - current_player, maximizing_player, alpha, beta)
         if rate < bestRate:
             bestRate = rate
-            bestTurns = [turn]
+            bestMoves = [move]
         elif rate == bestRate:
-            bestTurns.append(turn)
+            bestMoves.append(move)
 
         beta = min(beta, rate)
         if beta <= alpha:
             break
 
-    return random.choice(bestTurns), bestRate
+    return random.choice(bestMoves), bestRate
