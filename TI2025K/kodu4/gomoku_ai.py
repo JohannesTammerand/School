@@ -21,27 +21,27 @@ lastOppMove = (0, 0)
 lastMove = (0, 0)
 lastRate = 0
 lastBoardState = [[0]*15 for i in range(15)]
+#print(lastBoardState[2][2])
 
 def getTurn(board, move, depth=2):
     global lastRate, lastBoardState, lastOppMove
 
-    for row in board:
-        for column in row:
-            if column == move and lastBoardState[row][column] != move:
-                lastMove = (row, column)
-            if column == 3 - move and lastBoardState[row][column] != 3 - move:
-                lastOppMove = (row, column)
+    for i in range(15):
+        for j in range(15):
+            if lastBoardState[i][j] != move:
+                lastMove = (i, j)
+            if lastBoardState[i][j] != 3 - move:
+                lastOppMove = (i, j)
 
     moves = getFilteredMoves(board)
-    #bestTurns = [random.choice(moves)]
     bestTurns = [moves[0]]
     bestRate = 0
-    startRate = rateBoard(board, move)
+    startRate = rateBoard(board, move, 0)
     for turn in moves:
         b = deepcopy(board)
         b[turn[0]][turn[1]] = move
-        _turn, rate = minimax(b, startRate, lastMove, depth, move, move, float('-inf'), float('inf'))
-        print(turn, rate)
+        _turn, rate = minimax(b, startRate, depth, move, move, float('-inf'), float('inf'))
+        #print(turn, rate)
         if rate > 1000000:
                 print("Made move", turn, "score:", rate)
                 return turn
@@ -52,7 +52,7 @@ def getTurn(board, move, depth=2):
             bestTurns.append(turn)
 
     madeTurn = random.choice(bestTurns)
-    print("Made move", madeTurn, "score:", bestRate)
+    #print("Made move", madeTurn, "score:", bestRate)
 
     lastBoardState = board
     return madeTurn
@@ -100,12 +100,13 @@ def rateMove(turn, move):
 
     return score
 
-def rateBoard(board, move, lastMove, lastRate):
+def rateBoard(board, move, currentRate):
 
+    total = currentRate
     total += rateStone(lastMove, move, board)
     total -= rateStone(lastOppMove, move, board)
 
-    return total + lastRate
+    return total
 
 def rateStone(pos, move, board):
     directions = [(-1, 0), (0, -1), (-1, 1), (1, 1)]
@@ -135,6 +136,7 @@ def getLineFromBoard(pos, dx, dy, board, move):
 
     if line.count('_XX_') > 0:
         print(pos)
+
     return line
 
 def scorePattern(line):
@@ -170,7 +172,7 @@ def minimax(board, currentRate, depth, current_player, maximizing_player, alpha,
 
     moves = getFilteredMoves(board, radius=2)
     if depth < 0 or not moves:
-        return None, rateBoard(board, maximizing_player, lastMove, currentRate)
+        return None, rateBoard(board, maximizing_player, currentRate)
 
     if current_player == maximizing_player:
         return maximizer(board, currentRate, depth, current_player, maximizing_player, alpha, beta)
